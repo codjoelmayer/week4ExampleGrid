@@ -1,0 +1,51 @@
+/* Define custom variables */
+:root {
+    --primaryColor: black;
+    --secondaryColor: white;
+    --alternativeColor: rgba(79, 85, 87, 0.9);
+    --greenColor: rgba(11, 130, 11, .7);
+    /* none | h-offset (X) v-offset (Y) blur spread color */
+    --mainBoxShadow: .3vw .3vw 1vw rgba(120, 200, 87, 11);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+/* 
+The grid layout has two dimensions: rows and columns
+*/
+/* 
+gap: apply to both column and row
+column-gap and row-gap
+gap: 10px 10px;
+*/
+
+/* 
+Grid-lines:
+Line 1     Line 2    Line 3
+|          |          |
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+*/
+.container {
+    display: grid;
+    
+}
+.item {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    color: var(--secondaryColor);
+    background-color: var(--greenColor);
+}
+
+.evenElement {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
