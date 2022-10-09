@@ -15,6 +15,9 @@
 body {
     overflow-x: hidden;
 }
+h2, h3, h4, h5, h6{
+    text-align: center;
+}
 /* 
 The grid layout has two dimensions: rows and columns
 */
@@ -35,7 +38,7 @@ Line 1     Line 2    Line 3
 */
 .container {
     display: grid;
-    
+    grid-template-columns: auto auto auto;
 }
 .item {
     width: 150px;
@@ -44,8 +47,32 @@ Line 1     Line 2    Line 3
     color: var(--secondaryColor);
     background-color: var(--greenColor);
 }
-
-.evenElement {
+/* .evenElement {
     grid-column-start: 2;
     grid-column-end: 3;
+} */
+/* 
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto;
+justify-content
+align-content: Vertical alignment
+grid-column
+grid-row
+More examples: https://www.w3schools.com/css/css_grid_item.asp
+*/
+
+/* My page */
+.wrapper {
+    display: grid;
+}
+
+header, footer {
+    background-color: var(--alternativeColor);
+    height: 100px;
+}
+main {
+    min-height: 100vh;
+}
+footer {
+
 }
