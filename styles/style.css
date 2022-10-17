@@ -22,17 +22,48 @@ body{
     For good practice, make use of repeat() if all the columns have
     the same size.
     */
-    grid-template-columns: 100px 200px 200px;
+    grid-template-columns: repeat(3, 1fr);
     /* column-gap: 20px;
     row-gap: 20px; */
     /* Space between columns and rows */
     gap: 20px;
+    /* To set the height */
+    /* grid-auto-rows: minmax(200px, auto); */
+    /* Set rows */
+    /* grid-template-rows: repeat(3, 200px); */
+    /* Align items */
+    /* align-items the default setting is stretch */
+    /* other value will be start, end, center, and more*/
+    /* align-items: start; */
+    align-items: end;
+    /* justify-content: end, center, space-around, ... */
 }
 .item {
-    width: fit-content;
     color: white;
     border: 2px solid green; 
 }
+/* Apply align self */
+/* Select the second element */
+.item:nth-of-type(2) {
+    border-radius: 30px;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+}
+.item:first-child {
+    box-shadow: .5vw .5vw darkorange;
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    grid-column: 1/ -1;
+}
+
+.item:last-child {
+    box-shadow: .5vw .5vw rgb(85, 80, 75);
+    grid-column: 1/ -1;
+}
+
+
+
 .item:nth-child(even) {
     background-color: darkcyan;
 }
